@@ -52,13 +52,14 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun gettingDataFromInternet() {
+        Log.d(TAG,"GettingDataFromInternet")
         APIUserRestClient.instance.getMoviesList(page, object : RetrofitEventListener {
             override fun onSuccess(call: Call<*>?, response: Any?) {
                 if (response is BaseModel) {
                     for (index in response.results) {
                         movieList?.add(index)
-                        movieAdapter.notifyDataSetChanged()
                     }
+                    movieAdapter.notifyDataSetChanged()
                     page++
                     recyclerViewList.addOnScrollListener(object :
                         RecyclerView.OnScrollListener() {
@@ -69,6 +70,7 @@ class MainActivity : AppCompatActivity() {
                         ) {
                             super.onScrollStateChanged(recyclerView, newState)
                             isScrolling = true;
+                            Log.d(TAG,"onScrollStateChangeCalled")
                         }
 
                         override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {

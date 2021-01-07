@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit
 
 object NetworkClient {
 
-    private val BASE_URL = "https://api.themoviedb.org/"
+    private val BASE_URL = "https://api.themoviedb.org/3/"
     private val TIMEOUT = 10
     var retrofit: Retrofit? = null
 
