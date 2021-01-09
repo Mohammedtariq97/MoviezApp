@@ -18,33 +18,4 @@ data class ProductionCompanies(
     @SerializedName("origin_country")
     @Expose
     val originCountry: String
-) : Parcelable {
-    constructor(parcel: Parcel) : this(
-        parcel.readInt(),
-        parcel.readString(),
-        parcel.readString(),
-        parcel.readString()
-    ) {
-    }
-
-    override fun writeToParcel(parcel: Parcel, flags: Int) {
-        parcel.writeInt(id)
-        parcel.writeString(logoPath)
-        parcel.writeString(name)
-        parcel.writeString(originCountry)
-    }
-
-    override fun describeContents(): Int {
-        return 0
-    }
-
-    companion object CREATOR : Parcelable.Creator<ProductionCompanies> {
-        override fun createFromParcel(parcel: Parcel): ProductionCompanies {
-            return ProductionCompanies(parcel)
-        }
-
-        override fun newArray(size: Int): Array<ProductionCompanies?> {
-            return arrayOfNulls(size)
-        }
-    }
-}
+)

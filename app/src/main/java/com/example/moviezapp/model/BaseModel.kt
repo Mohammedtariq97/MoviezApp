@@ -4,6 +4,7 @@ import android.os.Parcel
 import android.os.Parcelable
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
+import java.util.ArrayList
 
 data class BaseModel(
     @SerializedName("page")
@@ -17,13 +18,13 @@ data class BaseModel(
     val totalResults: String,
     @SerializedName("results")
     @Expose
-    val results: List<ResultModel>
+    val results: ArrayList<ResultModel>
 ) : Parcelable {
     constructor(parcel: Parcel) : this(
-        parcel.readString(),
-        parcel.readString(),
-        parcel.readString(),
-        parcel.createTypedArrayList(ResultModel)
+        parcel.readString().toString(),
+        parcel.readString().toString(),
+        parcel.readString().toString(),
+        parcel.createTypedArrayList(ResultModel) as ArrayList<ResultModel>
     ) {
     }
 

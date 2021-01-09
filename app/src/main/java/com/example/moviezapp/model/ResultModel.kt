@@ -4,6 +4,7 @@ import android.os.Parcel
 import android.os.Parcelable
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
+import java.util.ArrayList
 
 data class ResultModel(
     @SerializedName("adult")
@@ -14,7 +15,7 @@ data class ResultModel(
     val backdropPath: String,
     @SerializedName("genre_ids")
     @Expose
-    val genreIds: List<String>,
+    val genreIds: ArrayList<String>,
     @SerializedName("id")
     @Expose
     val id: Int,
@@ -51,16 +52,16 @@ data class ResultModel(
 ) :Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readByte() != 0.toByte(),
-        parcel.readString(),
-        parcel.createStringArrayList(),
+        parcel.readString().toString(),
+        parcel.createStringArrayList()!!,
         parcel.readInt(),
-        parcel.readString(),
-        parcel.readString(),
-        parcel.readString(),
+        parcel.readString().toString(),
+        parcel.readString().toString(),
+        parcel.readString().toString(),
         parcel.readDouble(),
-        parcel.readString(),
-        parcel.readString(),
-        parcel.readString(),
+        parcel.readString().toString(),
+        parcel.readString().toString(),
+        parcel.readString().toString(),
         parcel.readByte() != 0.toByte(),
         parcel.readDouble(),
         parcel.readInt()
@@ -68,20 +69,28 @@ data class ResultModel(
     }
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
-        parcel.writeByte(if (adult) 1 else 0)
+        parcel.writeByte(if (adult == true) 1 else 0)
         parcel.writeString(backdropPath)
         parcel.writeStringList(genreIds)
-        parcel.writeInt(id)
+        if (id != null) {
+            parcel.writeInt(id)
+        }
         parcel.writeString(originalLanguage)
         parcel.writeString(originalTitle)
         parcel.writeString(overview)
-        parcel.writeDouble(popularity)
+        if (popularity != null) {
+            parcel.writeDouble(popularity)
+        }
         parcel.writeString(posterPath)
         parcel.writeString(releaseDate)
         parcel.writeString(title)
-        parcel.writeByte(if (video) 1 else 0)
-        parcel.writeDouble(voteAverage)
-        parcel.writeInt(voteCount)
+        parcel.writeByte(if (video!!) 1 else 0)
+        if (voteAverage != null) {
+            parcel.writeDouble(voteAverage)
+        }
+        if (voteCount != null) {
+            parcel.writeInt(voteCount)
+        }
     }
 
     override fun describeContents(): Int {

@@ -12,10 +12,10 @@ data class GenreModel(
     @SerializedName("name")
     @Expose
     val name: String
-) : Parcelable {
+) :Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readInt(),
-        parcel.readString()
+        parcel.readString().toString()
     ) {
     }
 
