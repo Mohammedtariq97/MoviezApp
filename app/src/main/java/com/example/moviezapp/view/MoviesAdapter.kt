@@ -14,8 +14,9 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.moviezapp.R
 import com.example.moviezapp.model.ResultModel
+import java.util.ArrayList
 
-class MoviesAdapter(private val context: Context, private val list: List<ResultModel>) :
+class MoviesAdapter(private val context: Context, private val list: ArrayList<ResultModel>) :
     RecyclerView.Adapter<MoviesAdapter.ViewHolder>() {
     val IMAGE_API = "https://image.tmdb.org/t/p/w500/"
 

@@ -23,7 +23,7 @@ class APIUserRestClient : Activity() {
     fun getMoviesList(page: Int, retrofitEventListener: RetrofitEventListener) {
         val retrofit = NetworkClient.retrofitClient
         mApiUser = retrofit.create<APIUser>(APIUser::class.java)
-        Log.d(TAG, "getMoviesList $page is called")
+        Log.d(TAG, "getMoviesList page $page is called")
         val apiUserCall = mApiUser?.getMovieResults(API_KEY, page)
 
         apiUserCall?.enqueue(object : Callback<BaseModel> {
