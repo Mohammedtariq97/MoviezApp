@@ -11,7 +11,7 @@ import java.util.ArrayList
 
 class MainActivityViewModel :ViewModel(){
 
-    var moviesDataList = MutableLiveData<ArrayList<ResultModel>>()
+    lateinit var moviesDataList : LiveData<ArrayList<ResultModel>>
 
     fun getMovieList(page:Int): LiveData<ArrayList<ResultModel>> {
         moviesDataList = MoviesRepository.getMoviesData(page)
@@ -19,7 +19,8 @@ class MainActivityViewModel :ViewModel(){
         return moviesDataList
     }
 
-//    fun gettingMoreDataFromInternet(page:Int){
-//        moviesDataList = MoviesRepository.getMoviesData(page)
-//    }
+    fun gettingMoreDataFromInternet(page:Int):LiveData<ArrayList<ResultModel>>{
+        val moviesDataList2 = MoviesRepository.getMoviesData(page)
+        return moviesDataList2
+    }
 }

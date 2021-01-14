@@ -21,7 +21,7 @@ data class MovieDescriptionModel(
     val budget: Int,
     @SerializedName("genres")
     @Expose
-    val genres: List<GenreModel>,
+    val genres: ArrayList<GenreModel>,
     @SerializedName("homepage")
     @Expose
     val homepage: String,
@@ -81,5 +81,5 @@ data class MovieDescriptionModel(
     val voteAverage: Double,
     @SerializedName("vote_count")
     @Expose
-    val vote_count: Int
+    val voteCount: Int
 )

@@ -9,16 +9,19 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.lifecycle.ViewModel
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.moviezapp.R
 import com.example.moviezapp.model.ResultModel
-import java.util.ArrayList
+import java.util.*
+
 
 class MoviesAdapter(private val context: Context, private val list: ArrayList<ResultModel>) :
     RecyclerView.Adapter<MoviesAdapter.ViewHolder>() {
     val IMAGE_API = "https://image.tmdb.org/t/p/w500/"
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         Log.d(MainActivity.TAG, "OnCreateViewHolderCalled")
@@ -60,5 +63,11 @@ class MoviesAdapter(private val context: Context, private val list: ArrayList<Re
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val movieTitle = itemView.findViewById<TextView>(R.id.movieTitleTextView)
         val movieImage = itemView.findViewById<ImageView>(R.id.movieImageView)
+    }
+
+    fun updateData(list: ArrayList<ResultModel>?) {
+        list?.clear()
+        list?.addAll(list)
+        notifyDataSetChanged()
     }
 }

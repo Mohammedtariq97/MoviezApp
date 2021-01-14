@@ -1,5 +1,6 @@
 package com.example.moviezapp.database
 
+import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
@@ -12,5 +13,5 @@ interface MovieDao {
     fun insert(movie:Movie)
 
     @Query("SELECT * from movieFavourite WHERE movie_id = :movieId")
-    fun getMovie(movieId:String) : Movie
+    fun getMovie(movieId:String) : LiveData<Movie>
 }
