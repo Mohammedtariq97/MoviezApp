@@ -32,7 +32,7 @@ class MovieDetailViewModel:ViewModel() {
     }
 
     fun getGenreDetail(movieId:String): LiveData<String> {
-        movieDetail = MoviesRepository.getMovieDetailFromInternet(movieId)
+        movieDetail = MoviesRepository.getMovieDetailFromInternet2(movieId)
         Log.d("MovieDetailViewModel","2.${movieDetail?.value?.genres}")
         var genreList = movieDetail.value?.genres
         var j = 0

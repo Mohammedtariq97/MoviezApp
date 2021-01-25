@@ -66,7 +66,6 @@ class MoviesAdapter(private val context: Context, private val list: ArrayList<Re
     }
 
     fun updateData(list: ArrayList<ResultModel>?) {
-        list?.clear()
         list?.addAll(list)
         notifyDataSetChanged()
     }

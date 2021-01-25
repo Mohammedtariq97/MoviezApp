@@ -57,6 +57,24 @@ object MoviesRepository {
         return movieDetailData
     }
 
+    fun getMovieDetailFromInternet2(movieId:String):LiveData<MovieDescriptionModel>{
+        val movieDetailData2 = MutableLiveData<MovieDescriptionModel>()
+        APIUserRestClient.instance.getMovieDescriptionList(movieId,object:RetrofitEventListener{
+            override fun onSuccess(call: Call<*>?, response: Any?) {
+                if(response is MovieDescriptionModel){
+                    Log.d("MovieRepo","${response.toString()}")
+                    movieDetailData2.value = response
+                }
+            }
+
+            override fun onError(call: Call<*>?, t: Throwable?) {
+                Log.d("MovieRepo","Error fetching a movie data")
+            }
+
+        })
+        return movieDetailData2
+    }
+
     fun insertFabButtonInDB(context: Context,movieId: String, title: String, i: Int) {
         val moviesDao = MoviesDatabase.getInstance(context).movieDao()
         val movie = Movie()

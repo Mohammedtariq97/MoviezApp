@@ -81,7 +81,7 @@ class MainActivity : AppCompatActivity() {
 //                        var movieListMore = MutableLiveData<ArrayList<ResultModel>>()
 //                        val moviesUpdatedlist : MutableLiveData<ArrayList<ResultModel>>?
                         val moviesUpdatedlist = mainActivityViewModel.gettingMoreDataFromInternet(page)
-                        movieAdapter.updateData(moviesUpdatedlist.value)
+                        movieAdapter.updateData(moviesList)
                         isScrolling = false
                     }
                 }

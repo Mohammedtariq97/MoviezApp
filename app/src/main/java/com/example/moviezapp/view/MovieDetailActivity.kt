@@ -78,7 +78,7 @@ class MovieDetailActivity : AppCompatActivity() {
                 .into(movieImage)
         })
         movieDetailViewModel.getGenreDetail(movieId).observe(this, Observer {
-            if((it != "")&&(it != null)){
+            if(it != ""){
                 genre.text = it
             }
 
