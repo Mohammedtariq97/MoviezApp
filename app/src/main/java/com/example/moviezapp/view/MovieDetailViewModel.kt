@@ -31,25 +31,6 @@ class MovieDetailViewModel:ViewModel() {
         return movieDetail
     }
 
-    fun getGenreDetail(movieId:String): LiveData<String> {
-        movieDetail = MoviesRepository.getMovieDetailFromInternet2(movieId)
-        Log.d("MovieDetailViewModel","2.${movieDetail?.value?.genres}")
-        var genreList = movieDetail.value?.genres
-        var j = 0
-        if (genreList != null) {
-            for (index in genreList) {
-                gdataList.add(index.name)
-                if (genreString != "") {
-                    genreString = genreString + "," + gdataList.get(j)
-                } else {
-                    genreString = gdataList.get(j)
-                }
-                j++
-            }
-        }
-        genre.value = genreString
-        return genre
-    }
 
     fun insertFabIntoDB(context: Context,movieId: String, title: String, i: Int) {
         MoviesRepository.insertFabButtonInDB(context,movieId,title,i)

@@ -13,6 +13,7 @@ import com.bumptech.glide.request.RequestOptions
 import com.example.moviezapp.R
 import com.example.moviezapp.database.Movie
 import com.example.moviezapp.database.MoviesDatabase
+import com.example.moviezapp.model.GenreModel
 import com.example.moviezapp.model.ResultModel
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
@@ -38,6 +39,7 @@ class MovieDetailActivity : AppCompatActivity() {
     var languageString: String = ""
     var posterPath: String = ""
     var movieTitleImage: String = ""
+    var gdataList = ArrayList<String>()
     val IMAGE_API = "https://image.tmdb.org/t/p/w500/"
     lateinit var movie2: Movie
     lateinit var movieDetailViewModel: MovieDetailViewModel
@@ -65,23 +67,15 @@ class MovieDetailActivity : AppCompatActivity() {
         rating.text = intent.voteAverage.toString()
         ratingCount.text = intent.voteCount.toString()
         movieDetailViewModel.getMovieDetail(movieId).observe(this, Observer {
-//            genre.text = it.genres.toString()
-            Log.d(TAG,"$it")
+            genre.text = genreConversion(it.genres)
             spokenLanguage.text = it.spokenLanguages[0].englishName
             posterPath = it.posterPath
-//            genre.text = getGenres(it.genres)
             movieTitleImage = IMAGE_API + posterPath
             Glide.with(this)
                 .load(movieTitleImage)
                 .placeholder(R.drawable.placeholderimg)
                 .apply(RequestOptions().fitCenter())
                 .into(movieImage)
-        })
-        movieDetailViewModel.getGenreDetail(movieId).observe(this, Observer {
-            if(it != ""){
-                genre.text = it
-            }
-
         })
 
         favouriteFab.setOnClickListener { view ->
@@ -103,6 +97,20 @@ class MovieDetailActivity : AppCompatActivity() {
 //            }
 //            Snackbar.make(view, "Added as Favourite", Snackbar.LENGTH_SHORT).show()
 //        }
+    }
+
+    private fun genreConversion(genres: ArrayList<GenreModel>): String {
+        var j=0
+        for (index in genres) {
+            gdataList.add(index.name)
+            if (genreString != "") {
+                genreString = genreString + "," + gdataList.get(j)
+            } else {
+                genreString = gdataList.get(j)
+            }
+            j++
+        }
+        return genreString
     }
 
 //    private fun getDataFromDB(movieId2: String): Int {
