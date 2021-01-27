@@ -13,5 +13,5 @@ interface MovieDao {
     fun insert(movie:Movie)
 
     @Query("SELECT * from movieFavourite WHERE movie_id = :movieId")
-    fun getMovie(movieId:String) : LiveData<Movie>
+    fun getMovie(movieId:String) : LiveData<Movie>?
 }

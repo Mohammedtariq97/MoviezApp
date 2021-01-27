@@ -12,17 +12,9 @@ import com.example.moviezapp.database.Movie
 
 class MovieDetailViewModel:ViewModel() {
     lateinit var movieDetail :LiveData<MovieDescriptionModel>
-//    var movieDetail2 = MutableLiveData<MovieDescriptionModel>()
-//    var genreDetail : MutableLiveData<ArrayList<GenreModel>>? = null
-//    var genreMovieString = MutableLiveData<String>()
     val genre = MutableLiveData<String>()
     var genreString = ""
     var gdataList = ArrayList<String>()
-//    var languageString: String = ""
-//    var spokenlanguage = ""
-//    var posterPath: String? = ""
-//    var movieTitleImage: String = ""
-//    val IMAGE_API = "https://image.tmdb.org/t/p/w500/"
     var liveDatafavButton: LiveData<Movie>? = null
 
     fun getMovieDetail(movieId:String): LiveData<MovieDescriptionModel> {
@@ -30,7 +22,6 @@ class MovieDetailViewModel:ViewModel() {
         Log.d("MovieDetailViewModel","1.${movieDetail.value}")
         return movieDetail
     }
-
 
     fun insertFabIntoDB(context: Context,movieId: String, title: String, i: Int) {
         MoviesRepository.insertFabButtonInDB(context,movieId,title,i)
