@@ -1,24 +1,16 @@
 package com.example.moviezapp.view
 
-import android.content.Context
-import android.net.ConnectivityManager
-import android.net.NetworkInfo
 import android.os.Bundle
 import android.util.Log
 import android.widget.ProgressBar
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.moviezapp.R
-import com.example.moviezapp.api.APIUserRestClient
-import com.example.moviezapp.model.BaseModel
+import com.example.moviezapp.adapter.MoviesAdapter
 import com.example.moviezapp.model.ResultModel
-import com.example.moviezapp.network.RetrofitEventListener
-import retrofit2.Call
+import com.example.moviezapp.viewmodel.MainActivityViewModel
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
@@ -29,7 +21,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var recyclerViewList: RecyclerView
     lateinit var progressBar: ProgressBar
     var page = 1
-    lateinit var movieAdapter :MoviesAdapter
+    lateinit var movieAdapter : MoviesAdapter
     lateinit var linearLayoutManager: LinearLayoutManager
 //    var movieList = ArrayList<ResultModel>()
     var pastVisibleItems = 0

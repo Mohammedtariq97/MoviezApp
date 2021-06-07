@@ -1,6 +1,5 @@
 package com.example.moviezapp.view
 
-import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -11,10 +10,9 @@ import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.moviezapp.R
-import com.example.moviezapp.database.Movie
-import com.example.moviezapp.database.MoviesDatabase
 import com.example.moviezapp.model.GenreModel
 import com.example.moviezapp.model.ResultModel
+import com.example.moviezapp.viewmodel.MovieDetailViewModel
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import java.util.ArrayList

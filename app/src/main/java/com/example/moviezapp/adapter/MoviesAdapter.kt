@@ -1,4 +1,4 @@
-package com.example.moviezapp.view
+package com.example.moviezapp.adapter
 
 import android.content.Context
 import android.content.Intent
@@ -9,12 +9,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.lifecycle.ViewModel
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.moviezapp.R
 import com.example.moviezapp.model.ResultModel
+import com.example.moviezapp.view.MainActivity
+import com.example.moviezapp.view.MovieDetailActivity
 import java.util.*
 
 

@@ -1,4 +1,4 @@
-package com.example.moviezapp.view
+package com.example.moviezapp.viewmodel
 
 import android.content.Context
 import androidx.lifecycle.LiveData
