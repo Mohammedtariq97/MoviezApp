@@ -1,0 +1,9 @@
+com/example/moviezapp/database/MoviesDatabase_Impl.java
+ com.example.moviezapp.database.MoviesDatabase_Impl
+ com.example.moviezapp.database.MoviesDatabase_Impl$1
+com/example/moviezapp/BuildConfig.java
+ com.example.moviezapp.BuildConfig
+com/example/moviezapp/database/MovieDao_Impl.java
+ com.example.moviezapp.database.MovieDao_Impl
+ com.example.moviezapp.database.MovieDao_Impl$1
+ com.example.moviezapp.database.MovieDao_Impl$2
