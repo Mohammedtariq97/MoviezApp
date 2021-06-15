@@ -49,33 +49,33 @@ class MovieDetailActivity : AppCompatActivity() {
         description.text = intent.overview
         rating.text = intent.voteAverage.toString()
         ratingCount.text = intent.voteCount.toString()
-        movieDetailViewModel.getMovieDetail(movieId).observe(this, Observer {
-            genre.text = genreConversion(it.genres)
-            spokenLanguage.text = it.spokenLanguages[0].englishName
-            posterPath = it.posterPath
-            movieTitleImage = IMAGE_API + posterPath
-            Glide.with(this)
-                .load(movieTitleImage)
-                .placeholder(R.drawable.placeholderimg)
-                .apply(RequestOptions().fitCenter())
-                .into(movieImage)
-        })
+//        movieDetailViewModel.getMovieDetail(movieId).observe(this, Observer {
+//            genre.text = genreConversion(it.genres)
+//            spokenLanguage.text = it.spokenLanguages[0].englishName
+//            posterPath = it.posterPath
+//            movieTitleImage = IMAGE_API + posterPath
+//            Glide.with(this)
+//                .load(movieTitleImage)
+//                .placeholder(R.drawable.placeholderimg)
+//                .apply(RequestOptions().fitCenter())
+//                .into(movieImage)
+//        })
 
-        favouriteFab.setOnClickListener { view ->
-            Log.d(TAG, "Inserting,${movieId},${intent.title}")
-
-            val fav=1
-            movieDetailViewModel.insertFabIntoDB(this,movieId,intent.title,fav)
-            Log.d(TAG, "favButStatus = 0")
-            favouriteFab.setImageResource(R.drawable.ic_fab_image)
-            Snackbar.make(view, "Added as Favourite", Snackbar.LENGTH_SHORT).show()
-        }
-
-        movieDetailViewModel.gettingDataFromDB(this,movieId)?.observe(this, Observer {
-            if(it != null){
-                favouriteFab.setImageResource(R.drawable.ic_fab_image)
-            }
-        })
+//        favouriteFab.setOnClickListener { view ->
+//            Log.d(TAG, "Inserting,${movieId},${intent.title}")
+//
+//            val fav=1
+//            movieDetailViewModel.insertFabIntoDB(this,movieId,intent.title,fav)
+//            Log.d(TAG, "favButStatus = 0")
+//            favouriteFab.setImageResource(R.drawable.ic_fab_image)
+//            Snackbar.make(view, "Added as Favourite", Snackbar.LENGTH_SHORT).show()
+//        }
+//
+//        movieDetailViewModel.gettingDataFromDB(this,movieId)?.observe(this, Observer {
+//            if(it != null){
+//                favouriteFab.setImageResource(R.drawable.ic_fab_image)
+//            }
+//        })
     }
 
     private fun genreConversion(genres: ArrayList<GenreModel>): String {

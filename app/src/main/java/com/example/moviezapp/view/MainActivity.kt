@@ -10,7 +10,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.moviezapp.R
 import com.example.moviezapp.adapter.MoviesAdapter
 import com.example.moviezapp.model.ResultModel
+import com.example.moviezapp.repository.MoviesRepository
 import com.example.moviezapp.viewmodel.MainActivityViewModel
+import com.example.moviezapp.viewmodel.MainActivityViewModelFactory
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
@@ -23,7 +25,7 @@ class MainActivity : AppCompatActivity() {
     var page = 1
     lateinit var movieAdapter : MoviesAdapter
     lateinit var linearLayoutManager: LinearLayoutManager
-//    var movieList = ArrayList<ResultModel>()
+    var movieList = ArrayList<ResultModel>()
     var pastVisibleItems = 0
     var visibleItemCount = 0
     var totalItemCount = 0
@@ -33,54 +35,58 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        mainActivityViewModel = ViewModelProvider(this).get(MainActivityViewModel::class.java)
+        val repository= MoviesRepository()
+        mainActivityViewModel = ViewModelProvider(this,MainActivityViewModelFactory(repository))
+                .get(MainActivityViewModel::class.java)
         bindViews()
-        mainActivityViewModel.getMovieList(page).observe(this, androidx.lifecycle.Observer { moviesList ->
-            Log.d(TAG,"moviesList= $moviesList")
-            setRecyclerView(moviesList)
+        setRecyclerView(movieList)
+        getMovieList()
+    }
+
+    private fun getMovieList() {
+        mainActivityViewModel.getMovieList()
+        mainActivityViewModel.moviesDataList.observe(this, androidx.lifecycle.Observer {
+            Log.d(TAG,it.results.toString())
+            setRecyclerView(it.results)
         })
     }
 
     private fun setRecyclerView(moviesList: ArrayList<ResultModel>) {
-        Log.d(TAG,"SettingRecyclerViewList")
         linearLayoutManager = LinearLayoutManager(this)
         linearLayoutManager.orientation = RecyclerView.VERTICAL
         recyclerViewList.layoutManager = linearLayoutManager
         movieAdapter = MoviesAdapter(this,  moviesList)
         recyclerViewList.adapter = movieAdapter
-        recyclerViewList.addOnScrollListener(object :
-            RecyclerView.OnScrollListener() {
+        recyclerViewList.addOnScrollListener(scrollListener)
 
-            override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
-                super.onScrollStateChanged(recyclerView, newState)
-                isScrolling = true;
-                Log.d(TAG, "onScrollStateChangeCalled")
-            }
-
-            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
-                super.onScrolled(recyclerView, dx, dy)
-                Log.d(TAG, "onScrolledCalled")
-                visibleItemCount = linearLayoutManager.childCount
-//                Log.d(TAG, visibleItemCount.toString())
-                totalItemCount = linearLayoutManager.itemCount
-//                Log.d(TAG, totalItemCount.toString())
-                pastVisibleItems =
-                    linearLayoutManager.findFirstVisibleItemPosition()
-//                Log.d(TAG, pastVisibleItems.toString())
-                if (isScrolling) {
-                    if (visibleItemCount + pastVisibleItems == totalItemCount) {
-                        page++
-//                        var movieListMore = MutableLiveData<ArrayList<ResultModel>>()
-//                        val moviesUpdatedlist : MutableLiveData<ArrayList<ResultModel>>?
-                        val moviesUpdatedlist = mainActivityViewModel.gettingMoreDataFromInternet(page)
-                        movieAdapter.updateData(moviesList)
-                        isScrolling = false
-                    }
-                }
-            }
-        })
     }
 
+    private val scrollListener : RecyclerView.OnScrollListener = object : RecyclerView.OnScrollListener() {
+
+        override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
+            super.onScrollStateChanged(recyclerView, newState)
+            isScrolling = true;
+            Log.d(TAG, "onScrollStateChangeCalled")
+        }
+
+        override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+            super.onScrolled(recyclerView, dx, dy)
+            Log.d(TAG, "onScrolledCalled")
+            visibleItemCount = linearLayoutManager.childCount
+//                Log.d(TAG, visibleItemCount.toString())
+            totalItemCount = linearLayoutManager.itemCount
+//                Log.d(TAG, totalItemCount.toString())
+            pastVisibleItems =
+                    linearLayoutManager.findFirstVisibleItemPosition()
+//                Log.d(TAG, pastVisibleItems.toString())
+            if (isScrolling) {
+                if (visibleItemCount + pastVisibleItems == totalItemCount) {
+                    getMovieList()
+                    isScrolling = false
+                }
+            }
+        }
+    }
 //    fun gettingDataFromInternet() {
 //        Log.d(TAG, "GettingDataFromInternet")
 //        APIUserRestClient.instance.getMoviesList(page, object : RetrofitEventListener {

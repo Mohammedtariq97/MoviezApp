@@ -17,19 +17,19 @@ class MovieDetailViewModel:ViewModel() {
     var gdataList = ArrayList<String>()
     var liveDatafavButton: LiveData<Movie>? = null
 
-    fun getMovieDetail(movieId:String): LiveData<MovieDescriptionModel> {
-        movieDetail = MoviesRepository.getMovieDetailFromInternet(movieId)
-        Log.d("MovieDetailViewModel","1.${movieDetail.value}")
-        return movieDetail
-    }
-
-    fun insertFabIntoDB(context: Context,movieId: String, title: String, i: Int) {
-        MoviesRepository.insertFabButtonInDB(context,movieId,title,i)
-    }
-
-    fun gettingDataFromDB(context: Context,movieId: String):LiveData<Movie>?{
-        liveDatafavButton = MoviesRepository.gettingDataFromDB(context,movieId)
-        Log.d("MovieDetailViewModel","${liveDatafavButton?.value?.favourite}")
-        return liveDatafavButton
-    }
+//    fun getMovieDetail(movieId:String): LiveData<MovieDescriptionModel> {
+//        movieDetail = MoviesRepository.getMovieDetailFromInternet(movieId)
+//        Log.d("MovieDetailViewModel","1.${movieDetail.value}")
+//        return movieDetail
+//    }
+//
+//    fun insertFabIntoDB(context: Context,movieId: String, title: String, i: Int) {
+//        MoviesRepository.insertFabButtonInDB(context,movieId,title,i)
+//    }
+//
+//    fun gettingDataFromDB(context: Context,movieId: String):LiveData<Movie>?{
+//        liveDatafavButton = MoviesRepository.gettingDataFromDB(context,movieId)
+//        Log.d("MovieDetailViewModel","${liveDatafavButton?.value?.favourite}")
+//        return liveDatafavButton
+//    }
 }

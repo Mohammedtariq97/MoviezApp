@@ -8,10 +8,13 @@ import androidx.room.RoomSQLiteQuery;
 import androidx.room.util.CursorUtil;
 import androidx.room.util.DBUtil;
 import androidx.sqlite.db.SupportSQLiteStatement;
+import java.lang.Class;
 import java.lang.Exception;
 import java.lang.Override;
 import java.lang.String;
 import java.lang.SuppressWarnings;
+import java.util.Collections;
+import java.util.List;
 import java.util.concurrent.Callable;
 
 @SuppressWarnings({"unchecked", "deprecation"})
@@ -79,10 +82,18 @@ public final class MovieDao_Impl implements MovieDao {
           if(_cursor.moveToFirst()) {
             _result = new Movie();
             final String _tmpMovieId;
-            _tmpMovieId = _cursor.getString(_cursorIndexOfMovieId);
+            if (_cursor.isNull(_cursorIndexOfMovieId)) {
+              _tmpMovieId = null;
+            } else {
+              _tmpMovieId = _cursor.getString(_cursorIndexOfMovieId);
+            }
             _result.setMovieId(_tmpMovieId);
             final String _tmpMovieName;
-            _tmpMovieName = _cursor.getString(_cursorIndexOfMovieName);
+            if (_cursor.isNull(_cursorIndexOfMovieName)) {
+              _tmpMovieName = null;
+            } else {
+              _tmpMovieName = _cursor.getString(_cursorIndexOfMovieName);
+            }
             _result.setMovieName(_tmpMovieName);
             final int _tmpFavourite;
             _tmpFavourite = _cursor.getInt(_cursorIndexOfFavourite);
@@ -101,5 +112,9 @@ public final class MovieDao_Impl implements MovieDao {
         _statement.release();
       }
     });
+  }
+
+  public static List<Class<?>> getRequiredConverters() {
+    return Collections.emptyList();
   }
 }

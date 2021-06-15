@@ -39,25 +39,25 @@
 24        android:theme="@style/Theme.MoviezApp" >
 24-->/Users/tariq/MoviezApp/app/src/main/AndroidManifest.xml:14:9-47
 25        <activity android:name="com.example.moviezapp.view.LoginActivity" >
-25-->/Users/tariq/MoviezApp/app/src/main/AndroidManifest.xml:15:9-21:20
+25-->/Users/tariq/MoviezApp/app/src/main/AndroidManifest.xml:15:9-17:20
 25-->/Users/tariq/MoviezApp/app/src/main/AndroidManifest.xml:15:19-53
-26            <intent-filter>
-26-->/Users/tariq/MoviezApp/app/src/main/AndroidManifest.xml:16:13-20:29
-27                <action android:name="android.intent.action.MAIN" />
-27-->/Users/tariq/MoviezApp/app/src/main/AndroidManifest.xml:17:17-69
-27-->/Users/tariq/MoviezApp/app/src/main/AndroidManifest.xml:17:25-66
-28
-29                <category android:name="android.intent.category.LAUNCHER" />
-29-->/Users/tariq/MoviezApp/app/src/main/AndroidManifest.xml:19:17-77
-29-->/Users/tariq/MoviezApp/app/src/main/AndroidManifest.xml:19:27-74
-30            </intent-filter>
-31        </activity>
-32        <activity android:name="com.example.moviezapp.view.MovieDetailActivity" />
-32-->/Users/tariq/MoviezApp/app/src/main/AndroidManifest.xml:22:9-62
-32-->/Users/tariq/MoviezApp/app/src/main/AndroidManifest.xml:22:19-59
-33        <activity android:name="com.example.moviezapp.view.MainActivity" >
-33-->/Users/tariq/MoviezApp/app/src/main/AndroidManifest.xml:23:9-25:20
-33-->/Users/tariq/MoviezApp/app/src/main/AndroidManifest.xml:23:19-52
+26        </activity>
+27        <activity android:name="com.example.moviezapp.view.MovieDetailActivity" />
+27-->/Users/tariq/MoviezApp/app/src/main/AndroidManifest.xml:18:9-62
+27-->/Users/tariq/MoviezApp/app/src/main/AndroidManifest.xml:18:19-59
+28        <activity android:name="com.example.moviezapp.view.MainActivity" >
+28-->/Users/tariq/MoviezApp/app/src/main/AndroidManifest.xml:19:9-25:20
+28-->/Users/tariq/MoviezApp/app/src/main/AndroidManifest.xml:19:19-52
+29            <intent-filter>
+29-->/Users/tariq/MoviezApp/app/src/main/AndroidManifest.xml:20:13-24:29
+30                <action android:name="android.intent.action.MAIN" />
+30-->/Users/tariq/MoviezApp/app/src/main/AndroidManifest.xml:21:17-69
+30-->/Users/tariq/MoviezApp/app/src/main/AndroidManifest.xml:21:25-66
+31
+32                <category android:name="android.intent.category.LAUNCHER" />
+32-->/Users/tariq/MoviezApp/app/src/main/AndroidManifest.xml:23:17-77
+32-->/Users/tariq/MoviezApp/app/src/main/AndroidManifest.xml:23:27-74
+33            </intent-filter>
 34        </activity>
 35
 36        <provider
@@ -72,13 +72,13 @@
 40-->[com.amitshekhar.android:debug-db:1.0.4] /Users/tariq/.gradle/caches/transforms-2/files-2.1/43053f961daf7658b8cf5e8145e674ac/jetified-debug-db-1.0.4/AndroidManifest.xml:37:13-37
 41
 42        <service
-42-->[androidx.room:room-runtime:2.2.6] /Users/tariq/.gradle/caches/transforms-2/files-2.1/95a24a7a4967989859826e263fe3e390/room-runtime-2.2.6/AndroidManifest.xml:25:9-28:40
+42-->[androidx.room:room-runtime:2.3.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/2f903493cb16483ce254ac06290f42d2/room-runtime-2.3.0/AndroidManifest.xml:25:9-28:40
 43            android:name="androidx.room.MultiInstanceInvalidationService"
-43-->[androidx.room:room-runtime:2.2.6] /Users/tariq/.gradle/caches/transforms-2/files-2.1/95a24a7a4967989859826e263fe3e390/room-runtime-2.2.6/AndroidManifest.xml:26:13-74
+43-->[androidx.room:room-runtime:2.3.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/2f903493cb16483ce254ac06290f42d2/room-runtime-2.3.0/AndroidManifest.xml:26:13-74
 44            android:directBootAware="true"
-44-->[androidx.room:room-runtime:2.2.6] /Users/tariq/.gradle/caches/transforms-2/files-2.1/95a24a7a4967989859826e263fe3e390/room-runtime-2.2.6/AndroidManifest.xml:27:13-43
+44-->[androidx.room:room-runtime:2.3.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/2f903493cb16483ce254ac06290f42d2/room-runtime-2.3.0/AndroidManifest.xml:27:13-43
 45            android:exported="false" />
-45-->[androidx.room:room-runtime:2.2.6] /Users/tariq/.gradle/caches/transforms-2/files-2.1/95a24a7a4967989859826e263fe3e390/room-runtime-2.2.6/AndroidManifest.xml:28:13-37
+45-->[androidx.room:room-runtime:2.3.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/2f903493cb16483ce254ac06290f42d2/room-runtime-2.3.0/AndroidManifest.xml:28:13-37
 46    </application>
 47
 48</manifest>

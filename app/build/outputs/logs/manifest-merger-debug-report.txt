@@ -6,17 +6,17 @@ INJECTED from /Users/tariq/MoviezApp/app/src/main/AndroidManifest.xml:2:1-28:12
 INJECTED from /Users/tariq/MoviezApp/app/src/main/AndroidManifest.xml:2:1-28:12
 MERGED from [com.amitshekhar.android:debug-db:1.0.4] /Users/tariq/.gradle/caches/transforms-2/files-2.1/43053f961daf7658b8cf5e8145e674ac/jetified-debug-db-1.0.4/AndroidManifest.xml:20:1-40:12
 MERGED from [androidx.core:core-ktx:1.3.2] /Users/tariq/.gradle/caches/transforms-2/files-2.1/41361b9f7b46ed6e014dbe34eeefad87/jetified-core-ktx-1.3.2/AndroidManifest.xml:2:1-9:12
-MERGED from [androidx.room:room-ktx:2.2.6] /Users/tariq/.gradle/caches/transforms-2/files-2.1/4f72f3f5b1efd64da8efd850b6431a19/jetified-room-ktx-2.2.6/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/44aad1a4e0855a06bfa5dd271013dd96/jetified-lifecycle-viewmodel-ktx-2.2.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.2.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/64feec14e33728a35b8855e9a09bfd01/jetified-lifecycle-livedata-ktx-2.2.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.2.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/665594ef65f895a33d929260040b3aca/jetified-lifecycle-livedata-core-ktx-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.room:room-ktx:2.3.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/033c698b885a05440aef286766c13248/jetified-room-ktx-2.3.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1] /Users/tariq/.gradle/caches/transforms-2/files-2.1/9b5263e63736f6d910124e11fbcda529/jetified-lifecycle-viewmodel-ktx-2.3.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.3.1] /Users/tariq/.gradle/caches/transforms-2/files-2.1/4cea930cfff34da279cf6eb38c8bb3e0/jetified-lifecycle-livedata-ktx-2.3.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.3.1] /Users/tariq/.gradle/caches/transforms-2/files-2.1/7b31de2aeb0a2b1f21e07fa8b982b071/jetified-lifecycle-livedata-core-ktx-2.3.1/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.material:material:1.2.1] /Users/tariq/.gradle/caches/transforms-2/files-2.1/510c987a74b26e0d326e9880d2cc3fe0/material-1.2.1/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] /Users/tariq/.gradle/caches/transforms-2/files-2.1/74d3dfb417b8176313f67b6d530795eb/constraintlayout-2.0.4/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat:1.2.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/f1f33b62267c75a6f99331b460a092b0/appcompat-1.2.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/dd19de491629ae7f47a65c6c8b1fd550/jetified-viewpager2-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/0a04e9946b744ea06f6fbe6dd9b1e1ef/recyclerview-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.github.bumptech.glide:glide:4.9.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/40ea36c99483c878284179c94547c93d/jetified-glide-4.9.0/AndroidManifest.xml:2:1-12:12
-MERGED from [androidx.room:room-runtime:2.2.6] /Users/tariq/.gradle/caches/transforms-2/files-2.1/95a24a7a4967989859826e263fe3e390/room-runtime-2.2.6/AndroidManifest.xml:17:1-31:12
+MERGED from [androidx.room:room-runtime:2.3.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/2f903493cb16483ce254ac06290f42d2/room-runtime-2.3.0/AndroidManifest.xml:17:1-31:12
 MERGED from [net.zetetic:android-database-sqlcipher:3.5.7] /Users/tariq/.gradle/caches/transforms-2/files-2.1/87be0208c5644745145b5c048bc28125/jetified-android-database-sqlcipher-3.5.7/AndroidManifest.xml:2:1-4:12
 MERGED from [androidx.fragment:fragment:1.1.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/d9d4f40b4f72e526051c0c60a6448dbf/fragment-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat-resources:1.2.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/dfb5faf4fa113f52011900c6d037c232/jetified-appcompat-resources-1.2.0/AndroidManifest.xml:17:1-24:12
@@ -33,17 +33,17 @@ MERGED from [androidx.core:core:1.3.2] /Users/tariq/.gradle/caches/transforms-2/
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/cdb6f207b4500473c7ffeec55f385efa/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.cardview:cardview:1.0.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/bc97950d719cef5aad9004493b26296c/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/78fc3819b1ecf3733d974826fcfe37bc/jetified-gifdecoder-4.9.0/AndroidManifest.xml:2:1-11:12
-MERGED from [androidx.sqlite:sqlite-framework:2.0.1] /Users/tariq/.gradle/caches/transforms-2/files-2.1/530a2c74a2000ee3ba0dcdaab00c04c2/sqlite-framework-2.0.1/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.sqlite:sqlite:2.0.1] /Users/tariq/.gradle/caches/transforms-2/files-2.1/f5b4e8402f765efef0844696917ca5e8/sqlite-2.0.1/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/9880e87ef9fdcc951dc4f91c3cd28ca3/lifecycle-viewmodel-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.sqlite:sqlite-framework:2.1.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/d61e7c3dc7b50b2d9653e7a9a3ecee2e/sqlite-framework-2.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.sqlite:sqlite:2.1.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/8d7a32160dba390ae7e019b4587be53a/sqlite-2.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] /Users/tariq/.gradle/caches/transforms-2/files-2.1/4bcab31ffa1f267c0ebcfc4e01545746/lifecycle-viewmodel-2.3.1/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/4b7c7d2fea271b9775df9dbec2d1fbdc/versionedparcelable-1.1.0/AndroidManifest.xml:17:1-27:12
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.2.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/ea7fec7991fbb61c2da63f02cf4b6964/lifecycle-livedata-2.2.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/8f9a8eb6f1bad90759c7bb764ae9d13d/lifecycle-livedata-core-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.3.1] /Users/tariq/.gradle/caches/transforms-2/files-2.1/ad92ae74d7aaeb7ba0204c5e256b8367/lifecycle-livedata-2.3.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] /Users/tariq/.gradle/caches/transforms-2/files-2.1/2b3d5037db0438599433d82a784eb6bf/lifecycle-livedata-core-2.3.1/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/d8762380457f4e044046181ed6cb1daf/core-runtime-2.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/143e0a29d4246fe2aafb332f9b3ba1c4/lifecycle-runtime-2.1.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/86aca1ce0e607d94ae2f2c41b50cc82e/jetified-savedstate-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/8ddc9952f727e6b4648fb3647c864837/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.annotation:annotation-experimental:1.0.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/c1bc2009ed393c1281f28af6bb79c366/jetified-annotation-experimental-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/427e5bb4ffc60755053de60fe775a963/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:17:1-24:12
 INJECTED from /Users/tariq/MoviezApp/app/src/main/AndroidManifest.xml:2:1-28:12
 INJECTED from /Users/tariq/MoviezApp/app/src/main/AndroidManifest.xml:2:1-28:12
 INJECTED from /Users/tariq/MoviezApp/app/src/main/AndroidManifest.xml:2:1-28:12
@@ -81,8 +81,8 @@ MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] /Users/tariq/.gra
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] /Users/tariq/.gradle/caches/transforms-2/files-2.1/74d3dfb417b8176313f67b6d530795eb/constraintlayout-2.0.4/AndroidManifest.xml:9:5-20
 MERGED from [com.github.bumptech.glide:glide:4.9.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/40ea36c99483c878284179c94547c93d/jetified-glide-4.9.0/AndroidManifest.xml:10:5-20
 MERGED from [com.github.bumptech.glide:glide:4.9.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/40ea36c99483c878284179c94547c93d/jetified-glide-4.9.0/AndroidManifest.xml:10:5-20
-MERGED from [androidx.room:room-runtime:2.2.6] /Users/tariq/.gradle/caches/transforms-2/files-2.1/95a24a7a4967989859826e263fe3e390/room-runtime-2.2.6/AndroidManifest.xml:24:5-29:19
-MERGED from [androidx.room:room-runtime:2.2.6] /Users/tariq/.gradle/caches/transforms-2/files-2.1/95a24a7a4967989859826e263fe3e390/room-runtime-2.2.6/AndroidManifest.xml:24:5-29:19
+MERGED from [androidx.room:room-runtime:2.3.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/2f903493cb16483ce254ac06290f42d2/room-runtime-2.3.0/AndroidManifest.xml:24:5-29:19
+MERGED from [androidx.room:room-runtime:2.3.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/2f903493cb16483ce254ac06290f42d2/room-runtime-2.3.0/AndroidManifest.xml:24:5-29:19
 MERGED from [androidx.core:core:1.3.2] /Users/tariq/.gradle/caches/transforms-2/files-2.1/79ee559483d346866425453a88a27286/core-1.3.2/AndroidManifest.xml:24:5-89
 MERGED from [androidx.core:core:1.3.2] /Users/tariq/.gradle/caches/transforms-2/files-2.1/79ee559483d346866425453a88a27286/core-1.3.2/AndroidManifest.xml:24:5-89
 MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/78fc3819b1ecf3733d974826fcfe37bc/jetified-gifdecoder-4.9.0/AndroidManifest.xml:9:5-20
@@ -104,27 +104,27 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/tari
 	android:theme
 		ADDED from /Users/tariq/MoviezApp/app/src/main/AndroidManifest.xml:14:9-47
 activity#com.example.moviezapp.view.LoginActivity
-ADDED from /Users/tariq/MoviezApp/app/src/main/AndroidManifest.xml:15:9-21:20
+ADDED from /Users/tariq/MoviezApp/app/src/main/AndroidManifest.xml:15:9-17:20
 	android:name
 		ADDED from /Users/tariq/MoviezApp/app/src/main/AndroidManifest.xml:15:19-53
-intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/tariq/MoviezApp/app/src/main/AndroidManifest.xml:16:13-20:29
-action#android.intent.action.MAIN
-ADDED from /Users/tariq/MoviezApp/app/src/main/AndroidManifest.xml:17:17-69
-	android:name
-		ADDED from /Users/tariq/MoviezApp/app/src/main/AndroidManifest.xml:17:25-66
-category#android.intent.category.LAUNCHER
-ADDED from /Users/tariq/MoviezApp/app/src/main/AndroidManifest.xml:19:17-77
-	android:name
-		ADDED from /Users/tariq/MoviezApp/app/src/main/AndroidManifest.xml:19:27-74
 activity#com.example.moviezapp.view.MovieDetailActivity
-ADDED from /Users/tariq/MoviezApp/app/src/main/AndroidManifest.xml:22:9-62
+ADDED from /Users/tariq/MoviezApp/app/src/main/AndroidManifest.xml:18:9-62
 	android:name
-		ADDED from /Users/tariq/MoviezApp/app/src/main/AndroidManifest.xml:22:19-59
+		ADDED from /Users/tariq/MoviezApp/app/src/main/AndroidManifest.xml:18:19-59
 activity#com.example.moviezapp.view.MainActivity
-ADDED from /Users/tariq/MoviezApp/app/src/main/AndroidManifest.xml:23:9-25:20
+ADDED from /Users/tariq/MoviezApp/app/src/main/AndroidManifest.xml:19:9-25:20
 	android:name
-		ADDED from /Users/tariq/MoviezApp/app/src/main/AndroidManifest.xml:23:19-52
+		ADDED from /Users/tariq/MoviezApp/app/src/main/AndroidManifest.xml:19:19-52
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/tariq/MoviezApp/app/src/main/AndroidManifest.xml:20:13-24:29
+action#android.intent.action.MAIN
+ADDED from /Users/tariq/MoviezApp/app/src/main/AndroidManifest.xml:21:17-69
+	android:name
+		ADDED from /Users/tariq/MoviezApp/app/src/main/AndroidManifest.xml:21:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/tariq/MoviezApp/app/src/main/AndroidManifest.xml:23:17-77
+	android:name
+		ADDED from /Users/tariq/MoviezApp/app/src/main/AndroidManifest.xml:23:27-74
 uses-sdk
 INJECTED from /Users/tariq/MoviezApp/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/tariq/MoviezApp/app/src/main/AndroidManifest.xml
@@ -133,14 +133,14 @@ MERGED from [com.amitshekhar.android:debug-db:1.0.4] /Users/tariq/.gradle/caches
 MERGED from [com.amitshekhar.android:debug-db:1.0.4] /Users/tariq/.gradle/caches/transforms-2/files-2.1/43053f961daf7658b8cf5e8145e674ac/jetified-debug-db-1.0.4/AndroidManifest.xml:25:5-27:41
 MERGED from [androidx.core:core-ktx:1.3.2] /Users/tariq/.gradle/caches/transforms-2/files-2.1/41361b9f7b46ed6e014dbe34eeefad87/jetified-core-ktx-1.3.2/AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.core:core-ktx:1.3.2] /Users/tariq/.gradle/caches/transforms-2/files-2.1/41361b9f7b46ed6e014dbe34eeefad87/jetified-core-ktx-1.3.2/AndroidManifest.xml:5:5-7:41
-MERGED from [androidx.room:room-ktx:2.2.6] /Users/tariq/.gradle/caches/transforms-2/files-2.1/4f72f3f5b1efd64da8efd850b6431a19/jetified-room-ktx-2.2.6/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.room:room-ktx:2.2.6] /Users/tariq/.gradle/caches/transforms-2/files-2.1/4f72f3f5b1efd64da8efd850b6431a19/jetified-room-ktx-2.2.6/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/44aad1a4e0855a06bfa5dd271013dd96/jetified-lifecycle-viewmodel-ktx-2.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/44aad1a4e0855a06bfa5dd271013dd96/jetified-lifecycle-viewmodel-ktx-2.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.2.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/64feec14e33728a35b8855e9a09bfd01/jetified-lifecycle-livedata-ktx-2.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.2.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/64feec14e33728a35b8855e9a09bfd01/jetified-lifecycle-livedata-ktx-2.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.2.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/665594ef65f895a33d929260040b3aca/jetified-lifecycle-livedata-core-ktx-2.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.2.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/665594ef65f895a33d929260040b3aca/jetified-lifecycle-livedata-core-ktx-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.room:room-ktx:2.3.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/033c698b885a05440aef286766c13248/jetified-room-ktx-2.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.room:room-ktx:2.3.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/033c698b885a05440aef286766c13248/jetified-room-ktx-2.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1] /Users/tariq/.gradle/caches/transforms-2/files-2.1/9b5263e63736f6d910124e11fbcda529/jetified-lifecycle-viewmodel-ktx-2.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1] /Users/tariq/.gradle/caches/transforms-2/files-2.1/9b5263e63736f6d910124e11fbcda529/jetified-lifecycle-viewmodel-ktx-2.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.3.1] /Users/tariq/.gradle/caches/transforms-2/files-2.1/4cea930cfff34da279cf6eb38c8bb3e0/jetified-lifecycle-livedata-ktx-2.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.3.1] /Users/tariq/.gradle/caches/transforms-2/files-2.1/4cea930cfff34da279cf6eb38c8bb3e0/jetified-lifecycle-livedata-ktx-2.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.3.1] /Users/tariq/.gradle/caches/transforms-2/files-2.1/7b31de2aeb0a2b1f21e07fa8b982b071/jetified-lifecycle-livedata-core-ktx-2.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.3.1] /Users/tariq/.gradle/caches/transforms-2/files-2.1/7b31de2aeb0a2b1f21e07fa8b982b071/jetified-lifecycle-livedata-core-ktx-2.3.1/AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.android.material:material:1.2.1] /Users/tariq/.gradle/caches/transforms-2/files-2.1/510c987a74b26e0d326e9880d2cc3fe0/material-1.2.1/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.material:material:1.2.1] /Users/tariq/.gradle/caches/transforms-2/files-2.1/510c987a74b26e0d326e9880d2cc3fe0/material-1.2.1/AndroidManifest.xml:20:5-44
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] /Users/tariq/.gradle/caches/transforms-2/files-2.1/74d3dfb417b8176313f67b6d530795eb/constraintlayout-2.0.4/AndroidManifest.xml:5:5-7:41
@@ -153,8 +153,8 @@ MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/tariq/.gradle/cach
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/0a04e9946b744ea06f6fbe6dd9b1e1ef/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [com.github.bumptech.glide:glide:4.9.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/40ea36c99483c878284179c94547c93d/jetified-glide-4.9.0/AndroidManifest.xml:6:5-8:41
 MERGED from [com.github.bumptech.glide:glide:4.9.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/40ea36c99483c878284179c94547c93d/jetified-glide-4.9.0/AndroidManifest.xml:6:5-8:41
-MERGED from [androidx.room:room-runtime:2.2.6] /Users/tariq/.gradle/caches/transforms-2/files-2.1/95a24a7a4967989859826e263fe3e390/room-runtime-2.2.6/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.room:room-runtime:2.2.6] /Users/tariq/.gradle/caches/transforms-2/files-2.1/95a24a7a4967989859826e263fe3e390/room-runtime-2.2.6/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.room:room-runtime:2.3.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/2f903493cb16483ce254ac06290f42d2/room-runtime-2.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.room:room-runtime:2.3.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/2f903493cb16483ce254ac06290f42d2/room-runtime-2.3.0/AndroidManifest.xml:20:5-22:41
 MERGED from [net.zetetic:android-database-sqlcipher:3.5.7] /Users/tariq/.gradle/caches/transforms-2/files-2.1/87be0208c5644745145b5c048bc28125/jetified-android-database-sqlcipher-3.5.7/AndroidManifest.xml:3:3-40
 MERGED from [net.zetetic:android-database-sqlcipher:3.5.7] /Users/tariq/.gradle/caches/transforms-2/files-2.1/87be0208c5644745145b5c048bc28125/jetified-android-database-sqlcipher-3.5.7/AndroidManifest.xml:3:3-40
 MERGED from [androidx.fragment:fragment:1.1.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/d9d4f40b4f72e526051c0c60a6448dbf/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
@@ -187,18 +187,18 @@ MERGED from [androidx.cardview:cardview:1.0.0] /Users/tariq/.gradle/caches/trans
 MERGED from [androidx.cardview:cardview:1.0.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/bc97950d719cef5aad9004493b26296c/cardview-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/78fc3819b1ecf3733d974826fcfe37bc/jetified-gifdecoder-4.9.0/AndroidManifest.xml:5:5-7:41
 MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/78fc3819b1ecf3733d974826fcfe37bc/jetified-gifdecoder-4.9.0/AndroidManifest.xml:5:5-7:41
-MERGED from [androidx.sqlite:sqlite-framework:2.0.1] /Users/tariq/.gradle/caches/transforms-2/files-2.1/530a2c74a2000ee3ba0dcdaab00c04c2/sqlite-framework-2.0.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.sqlite:sqlite-framework:2.0.1] /Users/tariq/.gradle/caches/transforms-2/files-2.1/530a2c74a2000ee3ba0dcdaab00c04c2/sqlite-framework-2.0.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.sqlite:sqlite:2.0.1] /Users/tariq/.gradle/caches/transforms-2/files-2.1/f5b4e8402f765efef0844696917ca5e8/sqlite-2.0.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.sqlite:sqlite:2.0.1] /Users/tariq/.gradle/caches/transforms-2/files-2.1/f5b4e8402f765efef0844696917ca5e8/sqlite-2.0.1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/9880e87ef9fdcc951dc4f91c3cd28ca3/lifecycle-viewmodel-2.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/9880e87ef9fdcc951dc4f91c3cd28ca3/lifecycle-viewmodel-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.sqlite:sqlite-framework:2.1.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/d61e7c3dc7b50b2d9653e7a9a3ecee2e/sqlite-framework-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.sqlite:sqlite-framework:2.1.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/d61e7c3dc7b50b2d9653e7a9a3ecee2e/sqlite-framework-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.sqlite:sqlite:2.1.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/8d7a32160dba390ae7e019b4587be53a/sqlite-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.sqlite:sqlite:2.1.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/8d7a32160dba390ae7e019b4587be53a/sqlite-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] /Users/tariq/.gradle/caches/transforms-2/files-2.1/4bcab31ffa1f267c0ebcfc4e01545746/lifecycle-viewmodel-2.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.3.1] /Users/tariq/.gradle/caches/transforms-2/files-2.1/4bcab31ffa1f267c0ebcfc4e01545746/lifecycle-viewmodel-2.3.1/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/4b7c7d2fea271b9775df9dbec2d1fbdc/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/4b7c7d2fea271b9775df9dbec2d1fbdc/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.2.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/ea7fec7991fbb61c2da63f02cf4b6964/lifecycle-livedata-2.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.2.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/ea7fec7991fbb61c2da63f02cf4b6964/lifecycle-livedata-2.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/8f9a8eb6f1bad90759c7bb764ae9d13d/lifecycle-livedata-core-2.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/8f9a8eb6f1bad90759c7bb764ae9d13d/lifecycle-livedata-core-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.3.1] /Users/tariq/.gradle/caches/transforms-2/files-2.1/ad92ae74d7aaeb7ba0204c5e256b8367/lifecycle-livedata-2.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.3.1] /Users/tariq/.gradle/caches/transforms-2/files-2.1/ad92ae74d7aaeb7ba0204c5e256b8367/lifecycle-livedata-2.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] /Users/tariq/.gradle/caches/transforms-2/files-2.1/2b3d5037db0438599433d82a784eb6bf/lifecycle-livedata-core-2.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.3.1] /Users/tariq/.gradle/caches/transforms-2/files-2.1/2b3d5037db0438599433d82a784eb6bf/lifecycle-livedata-core-2.3.1/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/d8762380457f4e044046181ed6cb1daf/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/d8762380457f4e044046181ed6cb1daf/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/143e0a29d4246fe2aafb332f9b3ba1c4/lifecycle-runtime-2.1.0/AndroidManifest.xml:20:5-44
@@ -207,8 +207,8 @@ MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/tariq/.gradle/caches/t
 MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/86aca1ce0e607d94ae2f2c41b50cc82e/jetified-savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/8ddc9952f727e6b4648fb3647c864837/interpolator-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/8ddc9952f727e6b4648fb3647c864837/interpolator-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.annotation:annotation-experimental:1.0.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/c1bc2009ed393c1281f28af6bb79c366/jetified-annotation-experimental-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.annotation:annotation-experimental:1.0.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/c1bc2009ed393c1281f28af6bb79c366/jetified-annotation-experimental-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/427e5bb4ffc60755053de60fe775a963/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/427e5bb4ffc60755053de60fe775a963/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:20:5-22:41
 INJECTED from /Users/tariq/MoviezApp/app/src/main/AndroidManifest.xml
 INJECTED from /Users/tariq/MoviezApp/app/src/main/AndroidManifest.xml
 	android:targetSdkVersion
@@ -234,10 +234,10 @@ ADDED from [com.amitshekhar.android:debug-db:1.0.4] /Users/tariq/.gradle/caches/
 	android:name
 		ADDED from [com.amitshekhar.android:debug-db:1.0.4] /Users/tariq/.gradle/caches/transforms-2/files-2.1/43053f961daf7658b8cf5e8145e674ac/jetified-debug-db-1.0.4/AndroidManifest.xml:34:13-63
 service#androidx.room.MultiInstanceInvalidationService
-ADDED from [androidx.room:room-runtime:2.2.6] /Users/tariq/.gradle/caches/transforms-2/files-2.1/95a24a7a4967989859826e263fe3e390/room-runtime-2.2.6/AndroidManifest.xml:25:9-28:40
+ADDED from [androidx.room:room-runtime:2.3.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/2f903493cb16483ce254ac06290f42d2/room-runtime-2.3.0/AndroidManifest.xml:25:9-28:40
 	android:exported
-		ADDED from [androidx.room:room-runtime:2.2.6] /Users/tariq/.gradle/caches/transforms-2/files-2.1/95a24a7a4967989859826e263fe3e390/room-runtime-2.2.6/AndroidManifest.xml:28:13-37
+		ADDED from [androidx.room:room-runtime:2.3.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/2f903493cb16483ce254ac06290f42d2/room-runtime-2.3.0/AndroidManifest.xml:28:13-37
 	android:directBootAware
-		ADDED from [androidx.room:room-runtime:2.2.6] /Users/tariq/.gradle/caches/transforms-2/files-2.1/95a24a7a4967989859826e263fe3e390/room-runtime-2.2.6/AndroidManifest.xml:27:13-43
+		ADDED from [androidx.room:room-runtime:2.3.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/2f903493cb16483ce254ac06290f42d2/room-runtime-2.3.0/AndroidManifest.xml:27:13-43
 	android:name
-		ADDED from [androidx.room:room-runtime:2.2.6] /Users/tariq/.gradle/caches/transforms-2/files-2.1/95a24a7a4967989859826e263fe3e390/room-runtime-2.2.6/AndroidManifest.xml:26:13-74
+		ADDED from [androidx.room:room-runtime:2.3.0] /Users/tariq/.gradle/caches/transforms-2/files-2.1/2f903493cb16483ce254ac06290f42d2/room-runtime-2.3.0/AndroidManifest.xml:26:13-74

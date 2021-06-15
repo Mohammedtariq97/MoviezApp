@@ -23,14 +23,14 @@
         android:testOnly="true"
         android:theme="@style/Theme.MoviezApp" >
         <activity android:name="com.example.moviezapp.view.LoginActivity" >
+        </activity>
+        <activity android:name="com.example.moviezapp.view.MovieDetailActivity" />
+        <activity android:name="com.example.moviezapp.view.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name="com.example.moviezapp.view.MovieDetailActivity" />
-        <activity android:name="com.example.moviezapp.view.MainActivity" >
         </activity>
 
         <provider
