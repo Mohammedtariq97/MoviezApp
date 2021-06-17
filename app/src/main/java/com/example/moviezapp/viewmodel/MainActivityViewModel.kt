@@ -42,6 +42,7 @@ class MainActivityViewModel(val movieRepo: MoviesRepository) :ViewModel(){
         if(response.isSuccessful){
             response.body().let {
                 page++
+                Log.d("Viewmodel","pagno = ${page}")
                 if(movieDataListPagination == null){
                     movieDataListPagination = it
                 }else{

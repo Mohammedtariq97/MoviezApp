@@ -23,7 +23,6 @@ class MainActivity : AppCompatActivity() {
     lateinit var recyclerViewList: RecyclerView
     lateinit var progressBar: ProgressBar
     var page = 1
-    lateinit var movieAdapter : MoviesAdapter
     lateinit var linearLayoutManager: LinearLayoutManager
     var movieList = ArrayList<ResultModel>()
     var pastVisibleItems = 0
@@ -31,6 +30,7 @@ class MainActivity : AppCompatActivity() {
     var totalItemCount = 0
     var isScrolling: Boolean = false
     lateinit var mainActivityViewModel: MainActivityViewModel
+    lateinit var adapter: MoviesAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
         mainActivityViewModel = ViewModelProvider(this,MainActivityViewModelFactory(repository))
                 .get(MainActivityViewModel::class.java)
         bindViews()
-        setRecyclerView(movieList)
+        setRecyclerView()
         getMovieList()
     }
 
@@ -47,16 +47,16 @@ class MainActivity : AppCompatActivity() {
         mainActivityViewModel.getMovieList()
         mainActivityViewModel.moviesDataList.observe(this, androidx.lifecycle.Observer {
             Log.d(TAG,it.results.toString())
-            setRecyclerView(it.results)
+            adapter.differ.submitList(it.results)
         })
     }
 
-    private fun setRecyclerView(moviesList: ArrayList<ResultModel>) {
+    private fun setRecyclerView() {
         linearLayoutManager = LinearLayoutManager(this)
+        adapter = MoviesAdapter(applicationContext)
         linearLayoutManager.orientation = RecyclerView.VERTICAL
         recyclerViewList.layoutManager = linearLayoutManager
-        movieAdapter = MoviesAdapter(this,  moviesList)
-        recyclerViewList.adapter = movieAdapter
+        recyclerViewList.adapter = adapter
         recyclerViewList.addOnScrollListener(scrollListener)
 
     }

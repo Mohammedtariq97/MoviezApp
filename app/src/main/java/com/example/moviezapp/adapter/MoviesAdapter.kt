@@ -9,6 +9,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.lifecycle.LifecycleOwner
+import androidx.recyclerview.widget.AsyncListDiffer
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
@@ -19,7 +22,8 @@ import com.example.moviezapp.view.MovieDetailActivity
 import java.util.*
 
 
-class MoviesAdapter(private val context: Context, private val list: ArrayList<ResultModel>) :
+class MoviesAdapter(private val context: Context
+) :
     RecyclerView.Adapter<MoviesAdapter.ViewHolder>() {
     val IMAGE_API = "https://image.tmdb.org/t/p/w500/"
 
@@ -35,9 +39,13 @@ class MoviesAdapter(private val context: Context, private val list: ArrayList<Re
         )
     }
 
+    override fun getItemViewType(position: Int): Int {
+        return position
+    }
+
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         Log.d(MainActivity.TAG, "OnBindViewHolder called")
-        val data = list[position]
+        val data = differ.currentList[position]
         holder.movieTitle.text = data.title
         val movieImage = IMAGE_API + data.backdropPath
         Glide.with(context)
@@ -49,17 +57,33 @@ class MoviesAdapter(private val context: Context, private val list: ArrayList<Re
             override fun onClick(view: View?) {
                 val intent = Intent(context, MovieDetailActivity::class.java)
                 val bundle = Bundle()
-                bundle.putParcelable("movieDetailList", list.get(holder.adapterPosition))
                 intent.putExtras(bundle)
                 view?.context?.startActivity(intent)
             }
         })
     }
 
-    override fun getItemCount(): Int {
-        Log.d(MainActivity.TAG, "getItemCountcalled")
-        return list.size
-    }
+    private val differCallback: DiffUtil.ItemCallback<ResultModel> =
+        object : DiffUtil.ItemCallback<ResultModel>() {
+            override fun areItemsTheSame(
+                oldItem: ResultModel,
+                newItem: ResultModel
+            ): Boolean {
+                return newItem.id == oldItem.id
+            }
+
+            override fun areContentsTheSame(
+                oldItem: ResultModel,
+                newItem: ResultModel
+            ): Boolean {
+                return newItem.title == oldItem.title
+            }
+
+        }
+
+    val differ = AsyncListDiffer(this, differCallback)
+
+    override fun getItemCount() = differ.currentList.size
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val movieTitle = itemView.findViewById<TextView>(R.id.movieTitleTextView)
