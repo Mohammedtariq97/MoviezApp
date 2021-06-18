@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.moviezapp.R
+import com.example.moviezapp.Utils.Constants.Companion.IMAGE_API
 import com.example.moviezapp.model.ResultModel
 import com.example.moviezapp.view.MainActivity
 import com.example.moviezapp.view.MovieDetailActivity
@@ -25,8 +26,6 @@ import java.util.*
 class MoviesAdapter(private val context: Context
 ) :
     RecyclerView.Adapter<MoviesAdapter.ViewHolder>() {
-    val IMAGE_API = "https://image.tmdb.org/t/p/w500/"
-
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         Log.d(MainActivity.TAG, "OnCreateViewHolderCalled")
@@ -56,8 +55,7 @@ class MoviesAdapter(private val context: Context
         holder.movieImage.setOnClickListener(object : View.OnClickListener {
             override fun onClick(view: View?) {
                 val intent = Intent(context, MovieDetailActivity::class.java)
-                val bundle = Bundle()
-                intent.putExtras(bundle)
+                intent.putExtra("MovieId",data.id.toString())
                 view?.context?.startActivity(intent)
             }
         })
@@ -88,10 +86,5 @@ class MoviesAdapter(private val context: Context
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val movieTitle = itemView.findViewById<TextView>(R.id.movieTitleTextView)
         val movieImage = itemView.findViewById<ImageView>(R.id.movieImageView)
-    }
-
-    fun updateData(list: ArrayList<ResultModel>?) {
-        list?.addAll(list)
-        notifyDataSetChanged()
     }
 }

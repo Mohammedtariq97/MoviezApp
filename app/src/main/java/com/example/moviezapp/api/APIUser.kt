@@ -1,6 +1,7 @@
 package com.example.moviezapp.api
 
 import com.example.moviezapp.model.BaseModel
+import com.example.moviezapp.model.MovieDescriptionModel
 import retrofit2.Response
 import retrofit2.http.*
 
@@ -11,10 +12,10 @@ interface APIUser {
                                 @Query("page") page: Int
     ): Response<BaseModel>
 
-//    @GET("movie/{movie_id}")
-//    fun getMovieResult(
-//        @Path("movie_id") movieId: String,
-//        @Query("api_key") apiKey: String
-//    ): Call<MovieDescriptionModel>
+    @GET()
+    suspend fun getMovieDetailResult(
+        @Url url:String ,
+        @Query("api_key") apiKey: String
+    ): Response<MovieDescriptionModel>
 
 }

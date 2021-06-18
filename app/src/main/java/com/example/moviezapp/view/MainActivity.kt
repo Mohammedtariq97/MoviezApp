@@ -87,57 +87,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
-//    fun gettingDataFromInternet() {
-//        Log.d(TAG, "GettingDataFromInternet")
-//        APIUserRestClient.instance.getMoviesList(page, object : RetrofitEventListener {
-//            override fun onSuccess(call: Call<*>?, response: Any?) {
-//                if (response is BaseModel) {
-//                    for (index in response.results!!) {
-//                        movieList?.add(index)
-//                    }
-//                    movieAdapter.notifyDataSetChanged()
-//                    page++
-//                    recyclerViewList.addOnScrollListener(object :
-//                        RecyclerView.OnScrollListener() {
-//
-//                        override fun onScrollStateChanged(
-//                            recyclerView: RecyclerView,
-//                            newState: Int
-//                        ) {
-//                            super.onScrollStateChanged(recyclerView, newState)
-//                            isScrolling = true;
-//                            Log.d(TAG, "onScrollStateChangeCalled")
-//                        }
-//
-//                        override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
-//                            super.onScrolled(recyclerView, dx, dy)
-//                            Log.d(TAG, "onScrolledCalled")
-//                            visibleItemCount = linearLayoutManager.childCount
-//                            Log.d(TAG, visibleItemCount.toString())
-//                            totalItemCount = linearLayoutManager.itemCount
-//                            Log.d(TAG, totalItemCount.toString())
-//                            pastVisibleItems =
-//                                linearLayoutManager.findFirstVisibleItemPosition()
-//                            Log.d(TAG, pastVisibleItems.toString())
-//                            if (isScrolling) {
-//                                if (visibleItemCount + pastVisibleItems == totalItemCount) {
-//                                    gettingDataFromInternet()
-//                                    isScrolling = false
-//                                }
-//                            }
-//                        }
-//                    })
-//                }
-//            }
-//
-//            override fun onError(call: Call<*>?, t: Throwable?) {
-//                Toast.makeText(
-//                    this@MainActivity, "Some error occurred",
-//                    Toast.LENGTH_SHORT
-//                ).show()
-//            }
-//        })
-//    }
 
     private fun bindViews() {
         recyclerViewList = findViewById(R.id.recyclerViewList)

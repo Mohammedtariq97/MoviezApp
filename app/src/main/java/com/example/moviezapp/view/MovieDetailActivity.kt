@@ -10,9 +10,15 @@ import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.moviezapp.R
+import com.example.moviezapp.Utils.Constants.Companion.BASE_URL
+import com.example.moviezapp.Utils.Constants.Companion.IMAGE_API
 import com.example.moviezapp.model.GenreModel
 import com.example.moviezapp.model.ResultModel
+import com.example.moviezapp.repository.MoviesRepository
+import com.example.moviezapp.viewmodel.MainActivityViewModel
+import com.example.moviezapp.viewmodel.MainActivityViewModelFactory
 import com.example.moviezapp.viewmodel.MovieDetailViewModel
+import com.example.moviezapp.viewmodel.MovieDetailViewModelFactory
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import java.util.ArrayList
@@ -35,20 +41,18 @@ class MovieDetailActivity : AppCompatActivity() {
     var posterPath: String = ""
     var movieTitleImage: String = ""
     var gdataList = ArrayList<String>()
-    val IMAGE_API = "https://image.tmdb.org/t/p/w500/"
     lateinit var movieDetailViewModel: MovieDetailViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_movie_detail)
+        val repository= MoviesRepository()
+        movieDetailViewModel = ViewModelProvider(this, MovieDetailViewModelFactory(repository))
+                .get(MovieDetailViewModel::class.java)
         bindViews()
-        movieDetailViewModel = ViewModelProvider(this).get(MovieDetailViewModel::class.java)
-        val intent = intent.getParcelableExtra<ResultModel>("movieDetailList")
-        movieId = intent.id.toString()
-        movieTitle.text = intent.title
-        description.text = intent.overview
-        rating.text = intent.voteAverage.toString()
-        ratingCount.text = intent.voteCount.toString()
+        val intent = getIntent().getStringExtra("MovieId")
+        movieId = intent.toString()
+        getMovieDetails(movieId)
 //        movieDetailViewModel.getMovieDetail(movieId).observe(this, Observer {
 //            genre.text = genreConversion(it.genres)
 //            spokenLanguage.text = it.spokenLanguages[0].englishName
@@ -76,6 +80,29 @@ class MovieDetailActivity : AppCompatActivity() {
 //                favouriteFab.setImageResource(R.drawable.ic_fab_image)
 //            }
 //        })
+    }
+
+    private fun getMovieDetails(movieId:String) {
+        val url = "$BASE_URL/movie/$movieId"
+        movieDetailViewModel.getMovieDetail(url)
+
+        movieDetailViewModel.movieDetail.observe(this, Observer {
+            movieTitle.text = it.originalTitle.toString()
+            description.text = it.overview.toString()
+            rating.text = it.imdbId.toString()
+            ratingCount.text = it.voteCount.toString()
+            genre.text = genreConversion(it.genres)
+            spokenLanguage.text = it.spokenLanguages[0].englishName
+            posterPath = it.posterPath
+            movieTitleImage = IMAGE_API + posterPath
+            Glide.with(this)
+                .load(movieTitleImage)
+                .placeholder(R.drawable.placeholderimg)
+                .apply(RequestOptions().fitCenter())
+                .into(movieImage)
+
+        })
+
     }
 
     private fun genreConversion(genres: ArrayList<GenreModel>): String {

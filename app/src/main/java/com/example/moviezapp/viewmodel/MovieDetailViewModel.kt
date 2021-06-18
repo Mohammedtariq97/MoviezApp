@@ -8,14 +8,46 @@ import com.example.moviezapp.model.MovieDescriptionModel
 import com.example.moviezapp.repository.MoviesRepository
 import java.util.ArrayList
 import android.util.Log
+import retrofit2.Response
+import androidx.lifecycle.viewModelScope
 import com.example.moviezapp.database.Movie
+import kotlinx.coroutines.launch
 
-class MovieDetailViewModel:ViewModel() {
-    lateinit var movieDetail :LiveData<MovieDescriptionModel>
+class MovieDetailViewModel(val movieRepo: MoviesRepository):ViewModel() {
+    lateinit var movieDetail :MutableLiveData<MovieDescriptionModel>
     val genre = MutableLiveData<String>()
     var genreString = ""
     var gdataList = ArrayList<String>()
     var liveDatafavButton: LiveData<Movie>? = null
+
+    init {
+        redeclareLivedata()
+    }
+
+    private fun redeclareLivedata() {
+        movieDetail = MutableLiveData<MovieDescriptionModel>()
+    }
+
+    fun getMovieDetail(url:String) = viewModelScope.launch {
+        try {
+            val response = movieRepo.getMovieDetailData(url)
+            movieDetail.postValue(handleMovieDetailResponse(response))
+        } catch (e: Exception) {
+            Log.d("ViewModel", "error = ${e.message.toString()}")
+            e.printStackTrace()
+        }
+    }
+
+    private fun handleMovieDetailResponse(response: Response<MovieDescriptionModel>): MovieDescriptionModel? {
+        if(response.isSuccessful){
+            response.body().let {
+                return it!!
+            }
+        }else{
+            Log.d("ViewModel","Error fetching response")
+            return null
+        }
+    }
 
 //    fun getMovieDetail(movieId:String): LiveData<MovieDescriptionModel> {
 //        movieDetail = MoviesRepository.getMovieDetailFromInternet(movieId)

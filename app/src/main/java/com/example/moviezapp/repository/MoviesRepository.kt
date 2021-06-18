@@ -25,6 +25,9 @@ class MoviesRepository {
     suspend fun getMoviesData(page:Int) = Retrofit.api.getMovieResults(Constants.API_KEY,page)
 
 
+    suspend fun getMovieDetailData(url:String) = Retrofit.api.getMovieDetailResult(url,Constants.API_KEY)
+
+
 //    suspend fun getMoviesData(page:Int) : LiveData<ArrayList<ResultModel>> {
 //        val moviesList = MutableLiveData<ArrayList<ResultModel>>()
 //        APIUserRestClient.instance.getMoviesList(page,object:RetrofitEventListener{
