@@ -50,20 +50,9 @@ class MovieDetailActivity : AppCompatActivity() {
         movieDetailViewModel = ViewModelProvider(this, MovieDetailViewModelFactory(repository))
                 .get(MovieDetailViewModel::class.java)
         bindViews()
-        val intent = getIntent().getStringExtra("MovieId")
+        val intent = getIntent()?.getStringExtra("MovieId")
         movieId = intent.toString()
         getMovieDetails(movieId)
-//        movieDetailViewModel.getMovieDetail(movieId).observe(this, Observer {
-//            genre.text = genreConversion(it.genres)
-//            spokenLanguage.text = it.spokenLanguages[0].englishName
-//            posterPath = it.posterPath
-//            movieTitleImage = IMAGE_API + posterPath
-//            Glide.with(this)
-//                .load(movieTitleImage)
-//                .placeholder(R.drawable.placeholderimg)
-//                .apply(RequestOptions().fitCenter())
-//                .into(movieImage)
-//        })
 
 //        favouriteFab.setOnClickListener { view ->
 //            Log.d(TAG, "Inserting,${movieId},${intent.title}")
@@ -87,9 +76,9 @@ class MovieDetailActivity : AppCompatActivity() {
         movieDetailViewModel.getMovieDetail(url)
 
         movieDetailViewModel.movieDetail.observe(this, Observer {
-            movieTitle.text = it.originalTitle.toString()
-            description.text = it.overview.toString()
-            rating.text = it.imdbId.toString()
+            movieTitle.text = it.originalTitle
+            description.text = it.overview
+            rating.text = it.voteAverage.toString()
             ratingCount.text = it.voteCount.toString()
             genre.text = genreConversion(it.genres)
             spokenLanguage.text = it.spokenLanguages[0].englishName
